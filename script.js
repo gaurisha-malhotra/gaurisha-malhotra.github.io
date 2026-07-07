@@ -43,9 +43,9 @@
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
-    $$(".reveal, .dateline").forEach((el) => io.observe(el));
+    $$(".reveal").forEach((el) => io.observe(el));
   } else {
-    $$(".reveal, .dateline").forEach((el) => el.classList.add("in"));
+    $$(".reveal").forEach((el) => el.classList.add("in"));
   }
 
   /* ---------------------------------------------------------------- COUNT-UP */
@@ -77,7 +77,7 @@
   /* ---------------------------------------------------------------- ROTATOR */
   const rotWord = $(".rotator__word");
   if (rotWord && !reduce) {
-    const words = ["act", "give", "care", "believe", "change"];
+    const words = ["act", "care", "give"];
     let i = 0;
     setInterval(() => {
       i = (i + 1) % words.length;
